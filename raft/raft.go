@@ -286,6 +286,7 @@ func (r *Raft) voteForSelf(grantedVotes *int) {
 	// TODO: (A.10) increment currentTerm
 	// TODO: (A.10) vote for self
 	// Hint: use `voteFor` to vote for self
+	r.currentTerm++
 	r.raftState.votedFor = r.id
 	(*grantedVotes)++
 
